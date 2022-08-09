@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form In Detail</title>
+	<link rel="stylesheet" href="D:\HTML and Web\style.css"></link>
+</head>
+<body>
+	<h1>Form Tag in detail</h1>
+	<ul>
+	<li>
+	<p>
+	I personally think that AJAX should be used for displays updates and form submissions should be done via a page reload. Reasoning?
+
+When submitting forms, you are telling the application to do something. Users tend to want to feel that it was done. When a page doesn't reload, users are often left wondering "Did that work?". Then they have to check to make sure what they did was right.
+
+On the other hand, when you are displaying a chart or something, and the user says to "display 2011 data....now 2012 data" for instance, they aren't "doing" something (creating new entities, sending emails, etc). So AJAX can provide a nice user interface in this case. Page reloads would be annoying here.
+
+In conclusion, I think form submission should be done via page reloads (let the user see it working), whereas display updates should use AJAX (prevent annoying page reloads).
+
+Of course, this is a preference thing. Some of my company's applications use AJAX all over. But those are the applications that are the most difficult to maintain and debug. ;)
+	</p></li>
+
+	<li>
+	<p>
+		
+I think that the choice between the two is somewhat intrinsic:
+
+a form submission is synchronous and it reloads the page.
+
+an ajax call is asynchronous and it does not reload the page.
+
+If a certain action will change a lot of UI elements or needs to poll a lot of data to be rendered, I would go with form submission. On the other hand, if a certain action is used for simple actions, like populating a select box or improving user experience, then I would go for an AJAX call.
+
+There is nothing avoiding you to use as many ajax calls or form submissions as you need, so in the end is up to you.
+	</p>
+	</li>
+	</ul>
+	
+	<h1>Forms tags:</h1>
+	<p>
+	<ul>
+		<li>
+			It may be possible that some attributes are not applicable or rather they dont add any significane to it. like value attribute for input type checkbox
+		</li>
+		</li>
+			Value attribute is something which will be used in name=value pair for HTTP request. So in presentation , you can display checkbox value using label. But actual value to be sent to the server wil be evaluated from value=
+		</li>
+		<li>
+			The list attribute in HTML is used to identify a list of pre-defined options for an <input> element to suggest the user.
+		</li>
+	</ul>
+	<p>
+	<ol>
+		<li>
+		<b>label:</b>
+		<p>
+		   HTML is not about presentation. It is a way of describing data. If you have some text that represents a label for an input, 
+			you wrap it in label tags not for presentation but because that's what it is. Without the label tag, that text is almost meaningless. With the label tag and its for attribute (or not*) you are providing meaning and structure and forming a relationship between your markup that can be better understood by computers/parsers/browsers/people.		
+		</p>
+		<p>
+			<code>
+				&ltlabel&gt Label name: &lt/label&gt
+			</code>
+		</p>		
+		</li>
+		<li>
+		<b>input:</b>
+		<p>
+			Input tag specifies the input field where user can enter the data. It's the most important form element. Depending upon the type attribute value. It can be displayed by several ways as below.
+			<ul>
+				<li>
+				 <b>Button</b>
+				<p>
+					Syntax : &ltinput type="button" &gt
+				</p>
+				<p>
+					<input type="button" value="click me">
+				</p>
+				</li>
+				<li>
+				<b>Checkbox</b>
+				<p>
+					Syntax : &ltinput type="checkbox" &gt
+				</p>
+				<p>
+					<label for="test">Test:</label>
+					<input type="checkbox" id="test" name="test" value="click me">
+				</p>
+				</li>
+				<li>
+				<b>Color</b>
+				<p>
+					Syntax : &ltinput type="color" &gt
+				</p>
+				<p>
+					<label for="test2">Test:</label>
+					<input type="color" id="test12" name="test2" value="#ff0000">
+				</p>
+				</li>
+					<li>
+				<b>date</b>
+				<p>
+					Syntax : &ltinput type="date" &gt
+				</p>
+				<p>
+					<label for="test3">Test:</label>
+					<input type="date" id="test3" name="test3" value="03/08/1995">
+				</p>
+				</li>
+				<li>
+				<b>datetime-local</b>
+				<p>
+					Syntax : &ltinput type="datetime-local" &gt
+				</p>
+				<p>
+					<label for="test4">Test:</label>
+					<input type="datetime-local" id="test4" name="test4" value="03/08/1995">
+				</p>
+				</li>
+				<li>
+				<b>radio</b>
+				<p>
+					Syntax : &ltinput type="radio" &gt
+				</p>
+				<p>
+					<label for="test5">Test:</label>
+					<input type="radio" id="test5" name="test5" value="03/08/1995">
+				</p>
+				</li>
+						<li>
+				<b>radio</b>
+				<p>
+					Syntax : &ltinput type="radio" &gt
+				</p>
+				<p>
+					<label for="test6">Test:</label>
+					<input type="radio" id="test6" name="test5" value="03/08/1995">
+				</p>
+				</li>
+				<li>
+				<b>email</b>
+				<p>
+					Syntax : &ltinput type="email" &gt
+				</p>
+				<p>
+					The &ltinput type="email"&gt is used for input fields that should contain an e-mail address.
+
+Depending on browser support, the e-mail address can be automatically validated when submitted.
+
+Some smartphones recognize the email type, and add ".com" to the keyboard to match email input.
+				</p>
+				<p>
+					<label for="test7">Test:</label>
+					<input type="email" id="test7" name="test7">
+				</p>
+				</li>
+						<li>
+				<b>file</b>
+				<p>
+					Syntax : &ltinput type="file" &gt
+				</p>
+				<p>
+					<label for="test8">Test:</label>
+					<input type="file" id="test8" name="test8" value="03/08/1995">
+				</p>
+				</li>
+						<li>
+				<b>hidden</b>
+				<p>
+					Syntax : &ltinput type="hidden" &gt
+				</p>
+				<p>
+					A hidden field lets web developers include data that cannot be seen or modified by users when a form is submitted.
+
+A hidden field often stores what database record that needs to be updated when the form is submitted.
+
+Note: While the value is not displayed to the user in the page's content, it is visible (and can be edited) using any browser's developer tools or "View Source" functionality. Do not use hidden inputs as a form of security!
+				</p>
+				<p>
+					<label for="test9">Test:</label>
+					<input type="hidden" id="test9" name="test9" value="03/08/1995">
+				</p>
+				</li>
+				<li>
+				<b>image</b>
+				<p>
+					Syntax : &ltinput type="image" &gt
+				</p>
+				<p>
+					The &ltinput type="image"&gt defines an image as a submit button.
+
+The path to the image is specified in the src attribute.
+
+
+				</p>
+				<p>
+					<label for="test10">Test:</label>
+					<input type="image" id="test10" name="test10" src="C:\Users\vme7qm\Pictures\Saved Pictures\nature.jpg">
+				</p>
+				</li>
+				<li>
+				<b>month</b>
+				<p>
+					Syntax : &ltinput type="month" &gt
+				</p>
+				<p>
+					<label for="test11">Test:</label>
+					<input type="month" id="test11" name="test11">
+				</p>
+				</li>
+				<li>
+				<b>number</b>
+				<p>
+					Syntax : &ltinput type="number" &gt
+				</p>
+				<p>
+					You can also set restrictions on what numbers are accepted.
+
+The following example displays a numeric input field, where you can enter a value from 1 to 5:
+				</p>
+				<p>
+					<label for="test12">Test:</label>
+					<input type="number" id="test12" name="test12" min="1" max="4">
+				</p>
+				</li>
+				<li>
+				<b>password</b>
+				<p>
+					Syntax : &ltinput type="password" &gt
+				</p>
+				<p>
+					<label for="test12">Test:</label>
+					<input type="password" id="test12" name="test12">
+				</p>
+				</li>
+
+				<li>
+				<b>range</b>
+				<p>
+					Syntax : &ltinput type="range" &gt
+				</p>
+				<p>
+					efines a control for entering a number whose exact value is not important (like a slider control). Default range is 0 to 100. However, you can set restrictions on what numbers are accepted with the min, max, and step attributes:
+				</p>
+				<p>
+					<label for="test13">Test:</label>
+					<input type="range" id="test13" name="test13">
+				</p>
+				</li>
+				<li>
+				<b>reset</b>
+				<p>
+					Syntax : &ltinput type="reset" &gt
+				</p>
+				<p>
+					<label for="test14">Test:</label>
+					<input type="reset" id="test14" name="test14">
+				</p>
+				</li>
+				<li>
+				<b>search</b>
+				<p>
+					Syntax : &ltinput type="search" &gt
+				</p>
+				<p>
+					a search field behaves like a regular text field)
+				</p>
+				<p>
+					<label for="test15">Test:</label>
+					<input type="search" id="test15" name="test15">
+				</p>
+				</li>
+				<li>
+				<b>submit</b>
+				<p>
+					Syntax : &ltinput type="submit" &gt
+				</p>
+				<p>
+					defines a button for submitting form data to a form-handler.
+
+The form-handler is typically a server page with a script for processing input data.
+
+The form-handler is specified in the form's action attribute:
+				</p>
+				<p>
+					<label for="test16">Test:</label>
+					<input type="submit" id="test16" name="test16" value="click me">
+				</p>
+				</li>
+				<li>
+				<b>tel</b>
+				<p>
+					Syntax : &ltinput type="tel" &gt
+				</p>
+				<p>
+					a input field which should contain a telephone number
+				</p>
+				<p>
+					<label for="test17">Test:</label>
+					<input type="tel" id="test17" name="test17" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+				</p>
+				</li>
+					<li>
+				<b>text</b>
+				<p>
+					Syntax : &ltinput type="text" &gt
+				</p>
+				<p>
+					a input field which defines a single line text field
+				</p>
+				<p>
+					<label for="test18">Test:</label>
+					<input type="text" id="test18" name="test18">
+				</p>
+				</li>
+				
+					<li>
+				<b>time</b>
+				<p>
+					Syntax : &ltinput type="time" &gt
+				</p>
+				<p>
+					a input field which defines a single line text field
+				</p>
+				<p>
+					<label for="test18">Test:</label>
+					<input type="text" id="test18" name="test18">
+				</p>
+				</li>
+				<li>
+				<b>url</b>
+				<p>
+					Syntax : &ltinput type="url" &gt
+				</p>
+				<p>
+					 is used for input fields that should contain a URL address.
+
+Depending on browser support, the url field can be automatically validated when submitted.
+
+Some smartphones recognize the url type, and adds ".com" to the keyboard to match url input.
+				</p>
+				<p>
+					<label for="test19">Test:</label>
+					<input type="text" id="test19" name="test19">
+				</p>
+				</li>
+				<li>
+				<b>week</b>
+				<p>
+					Syntax : &ltinput type="week" &gt
+				</p>
+				<p>
+					<label for="test20">Test:</label>
+					<input type="week" id="test20" name="test20">
+				</p>
+				</li>
+			</ul>
+		</p>
+		</li>
+		<li>
+		<b>select</b>
+		<p>
+			Select element mainly defines the drop down list
+		</p>
+		<p>
+			Syntax : &ltselect&gt &ltoption&gt option1 &lt/option&gt &lt/select&gt
+			The <option> elements defines an option that can be selected.
+
+By default, the first item in the drop-down list is selected.
+
+To define a pre-selected option, add the selected attribute to the option:
+		Use the size attribute to specify the number of visible values: Use the multiple attribute to allow the user to select more than one value:
+		</p>
+		<p>
+			<label for="list">List:</label>
+			<select id="list"><option>Pune</option></select>
+		</p>
+		</li>
+		<li>
+		<b>Textarea</b>
+		<p>This is textarea field. Its mainly multiline field. The rows attribute specifies the visible number of lines in a text area.
+
+The cols attribute specifies the visible width of a text area.</p>
+			Syntax : &lttextarea&gt &lt/textarea&gt
+		</li>
+		<li>
+		<b>Fieldset and Legend</b>
+		<p>
+			The &ltfieldset&gt element is used to group related data in a form.
+
+The &ltlegend&gt element defines a caption for the &ltfieldset&gt element.
+		</p>
+		</li>
+		<li>
+		<b>Datalist </b>
+		<p>
+		element specifies a list of pre-defined options for an input element. Users will see a drop-down list of the pre-defined options as they input data.
+		</p>
+		<p>
+			Syntax : &ltdatalist id="list"&gt &ltoption&gt option1 &lt/option&gt &ltdatalist&gt
+		</p>
+		</li>
+		<li>
+		<b>
+		optgroup
+		</b>
+		<p>
+			tag is used to group related options in a select tag element. If you have a long list of options, groups of related options are easier to handle for a user.
+		</p>
+		</li>
+	<ol>
+	<h1>Example:</h1>
+	<form action="#" method="GET">
+		<label for="fname">First name:</label>
+		<input type="text" id="fname" name="fname"
+		<input type="submit" value="submit" placeholder="Your text">
+		<label for="test14">Test:</label>
+					<input type="reset" id="test14" name="test14">
+	</form>	
+</body
+</html>
